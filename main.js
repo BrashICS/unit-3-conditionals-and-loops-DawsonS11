@@ -70,6 +70,10 @@ function upstairs() {
     let upstairs_choice = prompt("you walk upstairs and notice 2 rooms with the door shut but they have labels. Do you go into (1) bedroom or (2) bathroom")
 }
 
+function bedroom() {
+    alert("The ghost")
+}
+
 function downstairs() {
 
     let upstairs_choice = prompt("you walk downstairs and the ghost hears you going down the stairs and starts coming to the basement do you (1) hide under the stairs or (2) hide in a room")
