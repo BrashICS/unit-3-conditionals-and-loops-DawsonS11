@@ -28,7 +28,7 @@ function randInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-
+// halloween adventure game code
 function spooky_game() {
     
     let name = prompt("As you are trick or treating you stumble upon a especially spooky house. A ghost opens the door and asks for your name 👻👻👻")
@@ -40,11 +40,6 @@ function spooky_game() {
     if (room_choice == 1) {
 
         upstairs()
-        
-
-
-
-
         }
 
         else if (upstairs_choice == 2) {
@@ -129,3 +124,6 @@ function snoozefest() {
     alert("you waited around for too long and the haunted house trapped you forever")
 
 }
+
+
+// else if 
