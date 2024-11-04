@@ -13,7 +13,7 @@
 
 /*** Event Listeners ***/
 document.getElementById("game_start").addEventListener("click", spooky_game)
-
+document.getElementById("menu_button").addEventListener("click", menu)
 /*** Functions ***/
 
 // A very accurate rounding function
@@ -26,6 +26,84 @@ function round(value, decimals) {
 function randInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+
+// else if 
+    // Setup the menu
+    let message = `Hi! Please make a selection:
+    1 - Play
+    2 - Options
+    3 - DLC
+    4 - Check for Updates
+    5 - Exit
+    `
+    let difficulty = `What difficulty would you like to play?
+    1 - easy
+    2 - medium
+    3 - hard
+    `
+function menu() {
+    // Prompt with the menu
+let selection = Number(prompt(message));
+
+    if (selection == 1) {
+        alert("Let's play!")
+        let difficulty_choice = +prompt (difficulty)
+
+        if (difficulty_choice == 1) {
+            alert("You selected the easy route.")
+        }
+
+        else if (difficulty_choice == 2) {
+            alert("Most people select medium.")
+        }
+
+        else if (difficulty_choice == 3) {
+            alert("I see you like a challenge!")
+        }
+    }
+
+    else if (selection == 2) {
+        alert("You selected Options.")
+    }
+
+    else if (selection == 3) {
+        alert("No new DLC at this time.")
+    }
+
+    else if (selection == 4) {
+        alert("Everything is up to date.")
+    }
+
+    else if (selection == 5) {
+        alert("Bye!")
+    }
+}
+
+// Else if Part 2
+
+function greeting(hour) {
+    if ((hour >= 0) && (hour <= 11)) {
+        return "Good morning!"
+    }
+
+    else if ((hour >= 12) && (hour <= 17)) {
+        return "Good afternoon!"
+    }
+
+    else if ((hour >=18) && (hour <= 23)) {
+        return "Good evening!"
+    }
+}
+
+// Unit 3.2 optional
+
+function two_digit() {
+    let random_2d = (randInt(10, 99))
+
+
+}
+
 
 // halloween adventure game code
 function spooky_game() {
@@ -125,4 +203,3 @@ function snoozefest() {
 }
 
 
-// else if 
