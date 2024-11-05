@@ -202,5 +202,3 @@ function snoozefest() {
     alert("you waited around for too long and the haunted house trapped you forever")
 
 }
-
-
