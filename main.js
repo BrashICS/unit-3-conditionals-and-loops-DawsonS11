@@ -14,6 +14,7 @@
 /*** Event Listeners ***/
 document.getElementById("game_start").addEventListener("click", spooky_game)
 document.getElementById("menu_button").addEventListener("click", menu)
+document.getElementById("guess").addEventListener("click", guess_10);
 
 /*** Functions ***/
 
@@ -105,6 +106,82 @@ function two_digit() {
 
 }
 
+// Unit 3.3 (else) Part 1
+
+function is_number(num) {
+
+    if (typeof num == "number") {
+        return "true"
+    }
+
+    else {
+        return "false"
+    }
+}
+
+// Unit 3.3 Part 2
+
+function which_day(n) {
+    if (is_number(n) == "true") {
+
+        if (n == 1) {
+            return "Sunday"
+        }
+        else if (n == 2) {
+            return "Monday"
+        }
+        else if (n == 3) {
+            return "Tuesday"
+        }
+        else if (n == 4) {
+            return "Wednesday"
+        }
+        else if (n == 5) {
+            return "Thursday"
+        }
+        else if (n == 6) {
+            return "Friday"
+        }
+        else if (n == 7) {
+            return "Saturday"
+        }
+
+        else {
+            return "Invalid type"
+        }
+    }
+
+    else {
+        return "Invalid type"
+    }
+
+}
+
+// Unit 3.3 Part 3
+
+function guess_10() {
+    let secret_number = randInt(1,10)
+
+    let user_guess = +prompt("select a number from 1 to 10")
+
+    if (secret_number == user_guess) {
+        alert("you guessed the hidden number correct")
+    }
+    else if ((user_guess > 10) || (user_guess < 1)) {
+        alert(`your guess was not a number from 1-10, The secret number was ${secret_number}`)
+    }
+
+    else if (secret_number > user_guess) {
+        alert(`your guess was lower than the secret number. The secret number was ${secret_number}`)
+    }
+
+    else if (secret_number < user_guess) {
+        alert(`your guess was higher than the secret number. The secret number was ${secret_number}`)
+    }
+    else {
+        alert(`ERROR`)
+    }
+}
 
 // halloween adventure game code
 function spooky_game() {
