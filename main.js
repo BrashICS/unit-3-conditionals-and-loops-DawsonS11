@@ -183,6 +183,54 @@ function guess_10() {
     }
 }
 
+
+// Unit 3.4 Part 1
+
+function countdown(start,stop) {
+    if (stop > start) {
+        return -1
+    }
+
+    else {
+        let count = true
+        let amount = 0
+
+        while (count) {            
+            console.log(start)
+            start--
+            amount++
+
+            if (start == stop) {
+                count = false
+                return amount
+            }
+        }
+    }
+}
+
+// Unit 3.4 Part 2
+
+function random_until (min, max, stop) {
+
+    let amountofrolls = 1
+    if (min >= max) {
+        return -1
+    }
+
+    else if ((stop <= max) || (stop >= min)) {
+
+        let ran_num = randInt(min, max)
+
+        while (ran_num != stop) {
+            console.log(ran_num)
+            ran_num = randInt(min, max)
+            amountofrolls++
+        }
+    
+    return `it took ${amountofrolls} rolls`
+    }
+}
+
 // halloween adventure game code
 function spooky_game() {
     
