@@ -234,12 +234,25 @@ function average(n) {
     let count = 1
 
     while (count <= n) {
-        avg += +prompt(` please enter value ${count}/${n}`)
+        avg += +prompt(`please enter value ${count}/${n}`)
         count++
     }
 
     avg = round(avg / n, 1)
     console.log(`The average is ${avg}`)
+}
+
+// Unit 3.5 Part 1
+
+function print_reverse(str) {
+    let current_letter = str.length - 1
+    let reverse_word = ""
+    while (current_letter >= 0) {
+        reverse_word += (str[current_letter])
+        current_letter--
+    }
+
+console.log(reverse_word)
 }
 
 
