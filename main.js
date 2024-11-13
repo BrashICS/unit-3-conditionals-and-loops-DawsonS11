@@ -210,15 +210,12 @@ function countdown(start,stop) {
 
 // Unit 3.4 Part 2
 
-function random_until (min, max, stop) {
+function random_until(min, max, stop) {
 
-    let amountofrolls = 1
-    if (min >= max) {
+    if ((stop > max) || (stop < min) || (min >= max)) {
         return -1
     }
-
-    else if ((stop <= max) || (stop >= min)) {
-
+    else {
         let ran_num = randInt(min, max)
 
         while (ran_num != stop) {
@@ -226,10 +223,25 @@ function random_until (min, max, stop) {
             ran_num = randInt(min, max)
             amountofrolls++
         }
-    
-    return `it took ${amountofrolls} rolls`
+        return stop
     }
 }
+
+// Unit 3.4 Part 3
+
+function average(n) {
+    let avg = 0
+    let count = 1
+
+    while (count <= n) {
+        avg += +prompt(` please enter value ${count}/${n}`)
+        count++
+    }
+
+    avg = round(avg / n, 1)
+    console.log(`The average is ${avg}`)
+}
+
 
 // halloween adventure game code
 function spooky_game() {
