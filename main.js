@@ -255,6 +255,46 @@ function print_reverse(str) {
 console.log(reverse_word)
 }
 
+// Unit 3.5 Part 2
+
+function dragons_and_goblins(str) {
+    let current_letter = 0
+    let dragons = 0
+    let goblins = 0
+
+    while (current_letter < str.length) {
+        let letter = (str[current_letter])
+
+        if (letter == "d") {
+            dragons++
+        }
+
+        else if (letter == "g") {
+            goblins++
+        }
+
+        current_letter++
+    }
+
+    console.log(`Dragons: ${dragons} Goblins: ${goblins}`)
+}
+
+// Unit 3.5 Part 3
+
+function add(str) {
+    let current = 0
+    let sum = 0
+
+    while (current < str.length) {
+        let number = +(str[current])
+
+        sum += number
+
+        current++
+    }
+
+    return sum
+}
 
 // halloween adventure game code
 function spooky_game() {
