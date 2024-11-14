@@ -247,6 +247,7 @@ function average(n) {
 function print_reverse(str) {
     let current_letter = str.length - 1
     let reverse_word = ""
+
     while (current_letter >= 0) {
         reverse_word += (str[current_letter])
         current_letter--
@@ -263,13 +264,12 @@ function dragons_and_goblins(str) {
     let goblins = 0
 
     while (current_letter < str.length) {
-        let letter = (str[current_letter])
 
-        if (letter == "d") {
+        if ((str[current_letter]) == "d") {
             dragons++
         }
 
-        else if (letter == "g") {
+        else if ((str[current_letter]) == "g") {
             goblins++
         }
 
@@ -295,6 +295,32 @@ function add(str) {
 
     return sum
 }
+
+function add_subtract(str) {
+    let current = 0
+    let sum = 0
+
+    while (current < str.length) {
+        let number = (str[current])
+
+        if (number == "-") {
+            current++
+            number = +(str[current])
+
+            sum -= number
+        }
+        
+        else {
+            number = +(str[current])
+            sum += number 
+        }
+        
+        current++
+    }
+
+    return sum
+}
+
 
 // halloween adventure game code
 function spooky_game() {
