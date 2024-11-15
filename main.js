@@ -321,6 +321,34 @@ function add_subtract(str) {
     return sum
 }
 
+function parrot() {
+    let input;
+    do {
+
+        input = prompt("Please enter  some text or the word 'quit' to exit: ")
+
+        let output = input.toUpperCase()
+
+        if (input.toLowerCase() != "quit") {
+            console.log(output)
+        }
+
+    } while (input.toLowerCase() != "quit")
+
+    console.log("GOODBYE! 🦜")
+}
+
+function negative_only() {
+
+    let input;
+
+    do {
+        input = +prompt("Input a negative number: ;")
+
+    } while (input >= 0 || isNaN(input))
+
+    return input
+}
 
 // halloween adventure game code
 function spooky_game() {
