@@ -350,6 +350,25 @@ function negative_only() {
     return input
 }
 
+
+function count_up(start, stop) {
+    for (let min = start; min <= stop; min++) {
+        console.log(min)
+    }
+}
+
+function count_down(start, stop) {
+    for (let s = start; s >= stop; s--) {
+        console.log(s)
+    }
+}
+
+function print_chars(str, step) {
+    for (let start = 0; start < str.length; start += step) {
+        console.log(str[start])
+    }
+}
+
 // halloween adventure game code
 function spooky_game() {
     
