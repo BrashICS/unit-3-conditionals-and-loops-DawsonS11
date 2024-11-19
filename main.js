@@ -369,6 +369,31 @@ function print_chars(str, step) {
     }
 }
 
+function sum(n) {
+    let addition = 0
+    for (let start = 1; start <= n; start++) {
+        addition += start
+    }
+
+    return addition
+}
+
+function count4(begin, end) {
+    let divisible = 0
+    for (let start = begin; start <= end; start++) {
+
+        if (start % 4 == 0) {
+            divisible++
+        }
+    }
+
+    return divisible
+}
+
+function sum_divisible(n, x) {
+    
+}
+         
 // halloween adventure game code
 function spooky_game() {
     
