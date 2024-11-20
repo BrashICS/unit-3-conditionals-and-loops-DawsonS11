@@ -391,9 +391,45 @@ function count4(begin, end) {
 }
 
 function sum_divisible(n, x) {
-    
+    let addition = 0
+    for (let start = 0; start <= n; start++) {
+
+        if (start % x == 0) {
+            addition += start
+        }
+    }
+    return addition
 }
-         
+
+function count_char(str, char) {
+    let chars = 0
+    for (let count = 0; count < str.length; count++) {
+
+        if (str[count] == char) {
+            chars++
+        }
+    }
+
+    if (chars > 0) {
+        return chars
+    }
+
+    else {
+        return -1
+    }
+
+}
+
+
+function print_codes(str) {
+
+    for (let count = 0; count < str.length; count++) {
+        let code = str.charCodeAt(count)
+        console.log(code)
+    }
+}
+
+
 // halloween adventure game code
 function spooky_game() {
     
