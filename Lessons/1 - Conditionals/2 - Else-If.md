@@ -27,21 +27,17 @@ Unit 3 - Conditionals & Loops
 </ul>
 </td>
 <td td valign="top" style="height: 100px;padding-right:50px">
-<ul>
-<li><a href="../../README.md">README</a></li>
-<li><a href="./1 - If.md">3.1 - If</a></li>
-<li><a href="./2 - Else-If.md">3.2 - Else-If</a></li>
-<li><a href="./3 - Else.md">3.3 - Else</a></li>
-<li><a href="../2 - Loops/4 - While.md">3.4 - While</a></li>
-<li><a href="../2 - Loops/5 - Do-While.md">3.5 - Do...While</a></li>
-<li><a href="../2 - Loops/6 - For.md">3.6 - For</a></li>
-<ul>
 
-</td>
+- [README](../../README.md)
+- [3.1 - If](./1%20-%20IF.md)
+- [3.2 - Else-If](./2%20-%20Else-If.md)
+- [3.3 - Else](./3%20-%20Else.md)
+- [3.4 - While](../2%20-%20Loops/4%20-%20While.md)
+- [3.5 - Interlude: `Strings`](../2%20-%20Loops/5%20-%20Interlude_Strings.md)
+- [3.6 - Do...While](../2%20-%20Loops/6%20-%20Do-While.md)
+- [3.7 - For](../2%20-%20Loops/7%20-%20For.md)
 
-
-</tr>
-</table>
+</td></tr></table>
 
 ---
 
@@ -86,6 +82,8 @@ The `else if` block(s) will *only* be checked if the condition above it was `fal
 
 ### Example:
 
+##### [Top ⬆](#32---else-if)
+
 Let's retry our colour selection again, using `else if`:
 ```JS
 let selection = prompt("Enter 1 for red, 2 for blue, 3 for green, 4 for purple")
@@ -106,6 +104,7 @@ In the code above, if the user enters "2", the code will check if it's equal to 
 
 ### Final Notes:
 
+
 - In case you missed it, to get the **_length_ of a String**, we  use `.length`<br>For Example:<br>
   ```JS
   let name = "Mr. Squirrel";
@@ -115,6 +114,7 @@ In the code above, if the user enters "2", the code will check if it's equal to 
 
 
 ## Practice Time!
+##### [Top ⬆](#32---else-if)
 
 ### Part 1 - Menu
 
@@ -136,7 +136,7 @@ Menus are a good example of using `if-statements` to control the flow of a progr
 
     Whatever number they select will be stored in `selection`.  
 
-2. Based on what the user selects, use an `if-statement` and `else-if` statements to output (console.log) the following:
+2. Based on what the user selects, use an `if-statement` and `else-if` statements to output (`alert`) the following:
 
     | Value | Output |
     |---|---|
@@ -147,7 +147,7 @@ Menus are a good example of using `if-statements` to control the flow of a progr
     |5|"Bye!"|
 
 3. If the user selects `1 - Play`, we should then ask them a difficulty level of `1 - Easy`, `2 - Medium`, or `3 - Hard`.  
-After you print "Let's play!" to the console, prompt the user for their selection of difficulty.  <br><br>
+After you alert "Let's play!", prompt the user for their selection of difficulty.  <br><br>
 Depending on what they select, output the following:
     | Value | Output |
     |---|---|
@@ -164,10 +164,11 @@ Depending on what they select, output the following:
 
 ### Part 2 - AND and OR
 
+
 As mentioned in the previous lesson, you can combine _conditions_ with logical "AND" or "OR" operators. For example, to check if a number is between 5 and 10:
 ```JS
 if ((x >= 5) && (x <= 10)) {
-  // Do something
+    // Do something
 }
 ```
 
@@ -175,24 +176,28 @@ In that example, it is checking if the value is greater than or equal to 5 **and
 
 1. Create the function `greeting(hour)`  
 
-2. `hour` will be a value between 0-23 ([military time](https://en.wikipedia.org/wiki/24-hour_clock)). Just the hour, no minutes.
+2. `hour` will be a value between 0-23 that is passed to the function (no prompts or alerts). This is [military time](https://en.wikipedia.org/wiki/24-hour_clock).
 
 3. Depending on the value of `hour`, _return_ "Good morning!" (hour is 0-11), "Good afternoon!" (hour is 12-17), or "Good evening!" (hour is 18-23). If the hour is _any other value_, return "Invalid hour!".
 
 ### Here's another _optional_ challenge:
 
+##### [Top ⬆](#32---else-if)
+
 **Reminder:** Inside your [main.js](../../main.js) file is the `randInt()` function.
 
 1. Create the function `two_digit()` that does the following:
 
-2. Inside the `two-digit()` function Generate a random two-digit value and return a value based on the following:
-- If the value is zero, return 0
+2. Inside the `two-digit()` function Generate a random two-digit value and then _return_ based on the following:
+- If the value is specifically zero, return 0  
+- If the value is specficially divisible by 2 _AND_ 3, return "Divisible by 6"
+
+However,
 - If the value is `even`, return the word "Even"
 - If the value is `odd`, return the word "Odd"
-- If the value is divisible by 2 _AND_ 3, return 6
 - If the value is **_prime_**, return "Prime"
 
-Keep in mind, not all of those are ELSE-IF situations.
+Keep in mind, not all of those require ELSE-IF.
 
 <br><br>
 
